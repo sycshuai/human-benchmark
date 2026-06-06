@@ -3,7 +3,6 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import { gameRoutes } from './modules/game-list'
-import { accountRoutes } from './modules/account'
 export default new Router({
   routes: [
     {
@@ -34,17 +33,6 @@ export default new Router({
           path: 'game-record',
           component: () => import('@/views/dashboard/detail/components/RecordLayout.vue')
         }
-      ]
-    },
-    {
-      path: '/account',
-      component: () => import('@/views/account/Index.vue'),
-      children: [
-        {
-          path: '',
-          redirect: 'login'
-        },
-        ...accountRoutes
       ]
     },
     ...gameRoutes
