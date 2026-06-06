@@ -4,7 +4,7 @@ import { Message } from 'element-ui'
 
 // 创建axios实例
 const instance = axios.create({
-  baseURL: "https://people.3658056710qq.workers.dev",
+  baseURL: "https://people.azy.qzz.io",
   timeout: 10000,
   validateStatus: status => {
     // 允许返回所有状态码，不会遇到错误就停止
