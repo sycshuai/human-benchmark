@@ -15,7 +15,6 @@ const instance = axios.create({
 // 请求拦截
 instance.interceptors.request.use(config => {
   store.state.loading = true
-  config.headers.Authorization = `${store.state.userInfo.token}`
   return config
 }),
   err => {
